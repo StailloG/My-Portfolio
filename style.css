@@ -1,0 +1,14 @@
+.dimmed-text {
+    opacity: 0.5;
+}
+
+.right {
+    float: right;
+    margin-right: 400px;
+    position: relative;
+    top: -300px;
+}
+
+.content {
+    width: 30%;
+}
