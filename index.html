@@ -16,9 +16,37 @@
     <!--Google Material Icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD@400,0,0">
 
+    <style>
+        .category {
+            width: 250px;
+            background: lavender;
+            padding: 5px;
+        }
+        .category .section {
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+        }
+        .category .section:hover, .category .section.active {
+            background: #ddd;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 10px;
+            background-color: hotpink;
+        }
+        .material-symbols-outlined {
+            font-size: 30px;
+        }
+    </style>
+
 </head>
 
 <body>
+    <!--Header-->
     <div class="header">
         <section id="name" class="section">
             <h1 style="padding-left: 100px; margin: 0; margin-top: 250px; font-size: 40px; font-family: 'Poppins'; font-weight: 600;">Hello World! I am</h1>
@@ -30,74 +58,56 @@
         </section>
     </div>
     
-    <!--Content Titles (left)-->
-    <div class="content">
+    <!--Category Titles (left)-->
+    <div class="category">
         <section id="about" class="section" onclick="showSection('about')">
             <h2 style="margin-top: 150px; font-size: 25px; font-family: 'Poppins';">
                 <span class="material-symbols-outlined" style="font-size: 30px;">home</span> About Me</h2>
         </section>
 
-        <section id="skills" class="section">
+        <section id="skills" class="section" onclick="showSection('skills')">
             <h2 style="font-size: 25px; font-family: 'Poppins';">
                 <span class="material-symbols-outlined" style="font-size: 30px;">terminal</span> Skills</h2>
         </section>
 
-        <section id="projects" class="section">
+        <section id="projects" class="section" onclick="showSection('projects')">
             <h2 style="font-size: 25px; font-family: 'Poppins';">
                 <span class="material-symbols-outlined" style="font-size: 30px;">sports_esports</span> Projects</h2>
         </section>
 
-        <section id="work" class="section">
+        <section id="work" class="section" onclick="showSection('work')">
             <h2 style="font-size: 25px; font-family: 'Poppins';">
                 <span class="material-symbols-outlined" style="font-size: 30px;">work</span> Work Experience</h2>
         </section>
 
-        <section id="contact" class="section">
+        <section id="contact" class="section" onclick="showSection('contact')">
             <h2 style="font-size: 25px; font-family: 'Poppins';">
                 <span class="material-symbols-outlined" style="font-size: 30px;">mail</span> Contact</h2>
         </section>
     </div>
 
     <!--Content Window (right)-->
-    <div class="right">
-        <div id="right-content">
+    <div class="content" id="display-area">
             <section id="aboutme_window" class="section">
-                <h1 style="font-size: 25px; font-family: 'Poppins';">About Me</h1>
-                <p>Hello! I'm MYNAME and I have a passion for everything programming!</p>
-                <p>I graduated with my Bachelor's degree in Computer Science from UNIVERSITY and my Associates in Computer Science from COLLEGE.</p>
-                <p>I have corporate, school, and hobbiest experience! Check out the Skills and Projects tab to see which programming languages and programs I have experience in!</p>
-                <p>As a hobby, I am an indie game developer- specifically in the horror genre! It's refreshing getting to do it all- storyline, concept, 3D modeling,
-                    <br>and most importantly, programming! I share my games online for free, but I do plan on one day creating a gaming for profit!</p>
+                <h1 style="font-size: 25px; font-family: 'Poppins';">What should be here temporarily?</h1>
             </section>
-        </div>
     </div>
-
     <script>
-        function showSection(section) {
-            const content = {
-                about: `
-                    <h1 style="font-size: 25px; font-family: 'Poppins';">About Me</h1>
-                    <p>Hello! I'm MYNAME and I have a passion for everything programming!</p>
-                    <p>I graduated with my Bachelor's degree in Computer Science from UNIVERSITY and my Associates in Computer Science from COLLEGE.</p>
-                    <p>I have corporate, school, and hobbiest experience! Check out the Skills and Projects tab to see which programming languages and programs I have experience in!</p>
-                    <p>As a hobby, I am an indie game developer- specifically in the horror genre! It's refreshing getting to do it all- storyline, concept, 3D modeling,
-                    <br>and most importantly, programming! I share my games online for free, but I do plan on one day creating a gaming for profit!</p>
-                `,
-                skills: `
-                    <h1 style="font-size: 25px; font-family: 'Poppins';">Skills</h1>
-                `,
-                projects: `
-                    <h1 style="font-size: 25px; font-family: 'Poppins';">Projects</h1>
-                `,
-                work: `
-                    <h1 style="font-size: 25px; font-family: 'Poppins';">Work Experience</h1>
-                `,
-                contact: `
-                    <h1 style="font-size: 25px; font-family: 'Poppins';">Contact Information</h1>
-                `
+        function showSection(section)
+        {
+            const content = 
+            {
+                'about': '<h2>About Me</h2><p>Hello! I\'m MYNAME and I have a passion for everything programming!</p>',
+                'skills': '<h2>Skills</h2><p>I have corporate, education, and hobbiest programming experience!</p>',
+                'projects': '<h2>Projects</h2><p>Here are some of my past & current projects- majority are game development!</p>',
+                'work': '<h2>Work</h2><p>Dell Technologies | Software Engineer</p>',
+                'contact': '<h2>Contact</h2><p>Email: email@gmail.com</p>'
             };
 
-            document.getElementById("right-content").innerHTML = content[section];
+            document.getElementById('display-area').innerHTML = content[section];
+
+            document.querySelectorAll('.category .section').forEach(sec => sec.classList.remove('active'));
+            document.getElementById(section).classList.add('active');
         }
     </script>
 </body>
