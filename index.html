@@ -67,21 +67,41 @@
         .material-symbols-outlined {
             font-size: 30px;
         }
-        /*Window decor*/
+        /*tab decor*/
         .window-tab {
             position: relative;
-            width: 100%; /* Makes it span across the full page width */
+            width: 78.5%; /* Makes it span across the full page width */
             height: 100; /* Adjust the height as needed for a square or rectangle */
-            background-color: darkorchid;
+            background-color: #B0B0B0;
             border: 2px solid black;
             display: flex;
             justify-content: flex-end;
+            margin: 0 auto;
+        }
+        /*search decor*/
+        .search-decor {
+            position: relative;
+            width: 78.5%;
+            height: 200px;
+            background-color: #D2B1A3;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+        }
+        /*search bar decor*/
+        .white-search-bar {
+            position: relative;
+            width: 1000px;
+            height: 50px;
+            background-color: white;
+            display: flex;
         }
         .search-bar {
             width: 1500px;
             height: 1500px;
-            margin: 40px auto;
-            background-color: lightpink;
+            margin: 0 auto;
+            background-color: #D2B1A3;
             border: 2px solid black;
             display: flex;
             align-items: center;
@@ -91,42 +111,51 @@
 </head>
 
 <body>
-    <!--Frontend Developer | Backend Developer | Fullstack Developer | Hobbiest Game Developer-->
     <!--Window Tab-->
     <div class="window-tab">
         <span class="material-symbols-outlined" style="font-size: 50px;">removeclose</span>
     </div>
+
+    <!--Search Decor-->
+    <div class="search-decor">
+        <span class="material-symbols-outlined" style="font-size: 50px;">arrow_backarrow_forward</span>
+        
+        <!--Fake Search-->
+        <div class="white-search-bar">
+            <span style="font-size: 30px; padding-left: 10px;">C:\</span>
+        </div>
+    </div>
+
+    <!--Folder-->
     <div class="search-bar">
         <!--Sidebar Category & Content Container-->
         <div class="main-container">
+
             <!--Category Titles (left)-->
             <div class="category">
                 <section id="about" class="section" onclick="showSection('about')">
                     <h2 style="font-size: 25px; font-family: 'Poppins';">
                         <span class="material-symbols-outlined" style="font-size: 30px;">home</span> About Me</h2>
                 </section>
-
                 <section id="skills" class="section" onclick="showSection('skills')">
                     <h2 style="font-size: 25px; font-family: 'Poppins';">
                         <span class="material-symbols-outlined" style="font-size: 30px;">terminal</span> Skills</h2>
                 </section>
-
                 <section id="projects" class="section" onclick="showSection('projects')">
                     <h2 style="font-size: 25px; font-family: 'Poppins';">
                         <span class="material-symbols-outlined" style="font-size: 30px;">sports_esports</span> Projects</h2>
                 </section>
-
                 <section id="work" class="section" onclick="showSection('work')">
                     <h2 style="font-size: 25px; font-family: 'Poppins';">
                         <span class="material-symbols-outlined" style="font-size: 30px;">work</span> Work Experience</h2>
                 </section>
-
                 <section id="contact" class="section" onclick="showSection('contact')">
                     <h2 style="font-size: 25px; font-family: 'Poppins';">
                         <span class="material-symbols-outlined" style="font-size: 30px;">mail</span> Contact</h2>
                 </section>
             </div>
         </div>
+
             <!--Content Window (right)-->
             <div class="content" id="display-area">
                 <section id="aboutme_window" class="section">
@@ -135,18 +164,17 @@
             </div>
     </div>
     
-    
     <script>
         function showSection(section)
         {
             const content = 
             {
                 'about':'<h1>About Me</h1>' +
-                        '<p>Hello! I\'m Stephanie Castillo and I have a passion for everything programming!</p>' +
-                        '<p>I have work experience in fullstack development, education experience in backend development, and personal experience in everything game developement!</p>' +
+                        '<p>Hello! I\'m Stephanie Castillo, a software engineer with 2 years of experience specializing in both frontend and backend. </p>' +
+                        '<p>I have !</p>' +
                         '<p>I graduated with my Bachelor\'s degree in Computer Science at Florida International University.</p>' +
                         '<p></p>' +
-                        '<p>Outside of work, I enjoy watching comedy & horror movies, suspensful & action shows, digital art, working on 1000 piece puzzles, reading manga, and watching anime! </p>',
+                        '<p>In my free time, I enjoy working on game development projects using Unity, C#, and modeling with Blender!</p>',
                 'skills':'<h1>Skills</h1>' +
                         '<h2>Frontend: </h2><img src="html logo.png" alt="html_logo" width="100" height="100">' +
                         '<img src="CSS logo.png" alt="css_logo" width="100" height="100">' +
