@@ -2,6 +2,95 @@
     opacity: 0.5;
 }
 
+body { /*Category*/
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column; /*stacks header & content vertically*/
+}
+/*Sidebar & Content*/
+.main-container {
+    display: flex;
+    flex-grow: 1;
+    height: calc(100vh - 150px); /* Subtract header height from 100vh */
+}
+/*Titles to click on*/
 .category {
-    width: 30%;
+    flex-grow: 1;
+    width: 250px;
+    height: 835px;
+    background-color: #f5f1e6; /*soft beige*/
+    padding: 5px;
+    border: 2px solid  #E2D7C3; /*light taupe*/
+    margin-left: 20px;
+    margin-top: 0px;
+}
+.category .section {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+}
+.category .section:hover, .category .section.active {
+    background: #d8c8a3; /*muted tan*/
+}
+/*Further info*/
+.content {
+    flex-grow: 1;
+    width: 1000px;
+    height: 94.9%;
+    padding: 10px;
+    background-color: #FBF9F4; /*warm cream*/
+    margin-right: 20px;
+    margin-top: 0px;
+    position: relative;
+    border: 6px solid #E2D7C3; /*light taupe*/
+}
+.material-symbols-outlined {
+    font-size: 30px;
+}
+/*tab decor*/
+.window-tab {
+    position: relative;
+    width: 78.5%; /* Makes it span across the full page width */
+    height: 100; /* Adjust the height as needed for a square or rectangle */
+    background-color: #7393B3;
+    border: 2px solid black;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+}
+/*search decor*/
+.search-decor {
+    position: relative;
+    width: 78.5%;
+    height: 200px;
+    background-color: #D2B1A3;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+/*search bar decor*/
+.white-search-bar {
+    position: relative;
+    width: 1200px;
+    height: 35px;
+    background-color: white;
+    display: flex;
+    border: 3px solid black;
+    margin: 0 10px;
+}
+.search-bar {
+    width: 1500px;
+    height: 1500px;
+    margin: 0 auto;
+    background-color: #D2B1A3;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
