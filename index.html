@@ -8,121 +8,29 @@
     <link rel="stylesheet" href="style.css">
     
     <!--Google Fonts-->
-    <!--Poppins-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
     <!--Google Material Icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD@400,0,0">
-
-    <style>
-        body { /*Category*/
-            display: flex;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            flex-direction: column; /*stacks header & content vertically*/
-        }
-        /*Sidebar & Content*/
-        .main-container {
-            display: flex;
-            flex-grow: 1;
-            height: calc(100vh - 150px); /* Subtract header height from 100vh */
-        }
-        /*Titles to click on*/
-        .category {
-            flex-grow: 1;
-            width: 250px;
-            height: 835px;
-            background-color: #f5f1e6; /*soft beige*/
-            padding: 5px;
-            border: 2px solid  #E2D7C3; /*light taupe*/
-            margin-left: 20px;
-            margin-top: 0px;
-        }
-        .category .section {
-            padding: 10px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-radius: 5px;
-        }
-        .category .section:hover, .category .section.active {
-            background: #d8c8a3; /*muted tan*/
-        }
-        /*Further info*/
-        .content {
-            flex-grow: 1;
-            width: 1000px;
-            height: 94.9%;
-            padding: 10px;
-            background-color: #FBF9F4; /*warm cream*/
-            margin-right: 20px;
-            margin-top: 0px;
-            position: relative;
-            border: 6px solid #E2D7C3; /*light taupe*/
-        }
-        .material-symbols-outlined {
-            font-size: 30px;
-        }
-        /*tab decor*/
-        .window-tab {
-            position: relative;
-            width: 78.5%; /* Makes it span across the full page width */
-            height: 100; /* Adjust the height as needed for a square or rectangle */
-            background-color: #B0B0B0;
-            border: 2px solid black;
-            display: flex;
-            justify-content: flex-end;
-            margin: 0 auto;
-        }
-        /*search decor*/
-        .search-decor {
-            position: relative;
-            width: 78.5%;
-            height: 200px;
-            background-color: #D2B1A3;
-            border: 2px solid black;
-            display: flex;
-            align-items: center;
-            margin: 0 auto;
-        }
-        /*search bar decor*/
-        .white-search-bar {
-            position: relative;
-            width: 1000px;
-            height: 50px;
-            background-color: white;
-            display: flex;
-        }
-        .search-bar {
-            width: 1500px;
-            height: 1500px;
-            margin: 0 auto;
-            background-color: #D2B1A3;
-            border: 2px solid black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
 </head>
 
 <body>
     <!--Window Tab-->
     <div class="window-tab">
-        <span class="material-symbols-outlined" style="font-size: 50px;">removeclose</span>
+        <span class="material-symbols-outlined" style="font-size: 30px; border: 3px solid black; margin: 0 5px;">remove</span>
+        <span class="material-symbols-outlined" style="font-size: 30px; border: 3px solid black; margin: 0 5px;">close</span>
     </div>
 
-    <!--Search Decor-->
+    <!--Search Tab-->
     <div class="search-decor">
-        <span class="material-symbols-outlined" style="font-size: 50px;">arrow_backarrow_forward</span>
+        <span class="material-symbols-outlined" style="font-size: 30px; border: 3px solid black; margin: 0 5px;">arrow_back</span>
+        <span class="material-symbols-outlined" style="font-size: 30px; border: 3px solid black; margin: 0 5px;">arrow_forward</span>
         
         <!--Fake Search-->
         <div class="white-search-bar">
-            <span style="font-size: 30px; padding-left: 10px;">C:\</span>
+            <span style="font-size: 25px; padding-left: 10px;">C:\</span>
         </div>
     </div>
 
@@ -159,7 +67,7 @@
             <!--Content Window (right)-->
             <div class="content" id="display-area">
                 <section id="aboutme_window" class="section">
-                    <h1 style="font-size: 25px; font-family: 'Poppins';">Click on a category on the right to learn more about me!</h1>
+                    <h1 style="font-size: 25px; font-family: 'Poppins';">Welcome! Click on a category on the left to learn more about me!</h1>
                 </section>
             </div>
     </div>
@@ -170,26 +78,58 @@
             const content = 
             {
                 'about':'<h1>About Me</h1>' +
-                        '<p>Hello! I\'m Stephanie Castillo, a software engineer with 2 years of experience specializing in both frontend and backend. </p>' +
-                        '<p>I have !</p>' +
-                        '<p>I graduated with my Bachelor\'s degree in Computer Science at Florida International University.</p>' +
-                        '<p></p>' +
-                        '<p>In my free time, I enjoy working on game development projects using Unity, C#, and modeling with Blender!</p>',
+                        '<p>Hello! I\'m Stephanie Castillo, a software engineer with 2 years of experience specializing in both frontend and backend development.</p>' +
+                        '<p>I enjoy everything programming- from corporate projects to game developement to exploring new advancements in tech. My mission is to use programming as a tool to help others and make a meaningful impact through technology.</p>' +
+                        '<p>I graduated with my Bachelor\'s degree in Computer Science at Florida International University, along with an Associate\'s degree in Computer Science at Broward College.</p>' +
+                        '<p>In my free time, you can find me working on game development projects- specifically designing pyschological horror games utilizing Unity, programming in C#, and 3D modeling in Blender!</p>',
+
                 'skills':'<h1>Skills</h1>' +
-                        '<h2>Frontend: </h2><img src="html logo.png" alt="html_logo" width="100" height="100">' +
-                        '<img src="CSS logo.png" alt="css_logo" width="100" height="100">' +
-                        '<img src="javascript logo.png" alt="javascript_logo" width="200" height="100">' +
-                        '<img src="typescript logo.png" alt="typescript_logo" width="100" height="100">' +
-                        '<h2>Backend:</h2><p>C#, Java, Python, C++, C, Node.JS</p>' +
-                        '<h2>Fullstack: </h2>' +
-                        '<h2>Frameworks: </h2><p>Angular, HTML, Node.js, CSS</p>',
-                'projects': '<h1>Projects</h1><p>Here are some of my past & current projects- majority are game development!</p>',
-                'work': '<h1>Work</h1><p>Dell Technologies | Software Engineer</p>',
-                'contact': '<h1>Contact</h1><p>Email: email@gmail.com</p>'
+                        '<h3 style="margin: 0;">Programming Languages: </h3><p style="margin: 0;">C#, Java, TypeScript, JavaScript, C++, Python, C</p>' +
+                        '<h3 style="margin: 10px 0 0 0;">Web & Frameworks: </h3><p style="margin: 0;">Angular, HTML, Node.js, CSS/SCSS</p>' +
+                        '<h3 style="margin: 10px 0 0 0;">Databases: </h3><p style="margin: 0;">MongoDB, SQL, Redis</p>' +
+                        '<h3 style="margin: 10px 0 0 0;">Tools & Software:</h3><p style="margin: 0;">Visual Studios, Eclipse, Git, GitHub, GitLab, Postman' +
+                        '<h3 style="margin: 10px 0 0 0;">Cloud & Devops:</h3><p style="margin: 0;">CI/CD</p>' +
+                        '<h3 style="margin: 10px 0 0 0;">Other Technologies:</h3><p style="margin: 0;">Unity (2D & 3D), Bledner, Adobe Premiere Pro, Photoshop, Clip Studio Pro, Unreal Engine</p>' +
+                        '<h3 style="margin: 10px 0 0 0;">Productivity & Office Tools:</h3><p style="margin: 0;">Microsoft Word, PowerPoint, Excel</p>',
+                       
+                'projects': '<h1>Projects</h1><p>Here are some of my past projects- majority are game development!</p>' +
+                            '<h3 style="margin: 0;">Stick Fig FPS</h3>' +
+                            '<div class="project-card" style="margin: 0; margin-bottom: 10px; display: flex; align-items: center;">' +
+                                '<img src="stick-fig-fps-gif.gif" alt="Project_GIF" width="350" height="200" style="margin-right: 10px;">' +
+                                '<p style="margin: 0;">Stick Fig FPS is an arcade first-person shooter where the goal is to find paper enemies and "erase" them. Explore different locations with hand-drawn art style and engaging music for each level.</p>' +
+                            '</div>' +
+
+                            '<h3  style="margin: 0;">Astrophobia</h3>' +
+                            '<div class="project-card" style="margin: 0; display: flex; align-items: center;">' +
+                                '<img src="astrophobia-gif.gif" alt="Project_GIF" width="350" height="200" style="margin-right: 10px;">' +
+                                '<p style="margin: 0;">Astrophobia is a bite-sized horror game where the player is camping but notices that the stars are not actually stars..</p>' +
+                            '</div>',
+
+                'work': '<h1>Work Experience</h1>' +
+                        '<h3 style="margin: 0;">Software Engineer | Dell Technologies</h3>' +
+                        '<p style="margin: 0;">February 2023 - February 2025</p>' +
+                        '<ul>' +
+                            '<li>Developed and implemented new features for a B2B client portal with frontend and backend developement utilizing C# and Angular.</li>' +
+                            '<li>Collaborated in Agile sprints abd contributed to sprint planning and reviews.</li>' +
+                            '<li>Debugged and resolved issues to enhance system performance, including reducing redundant executions to improve page load speed and implementing a tooltip for the Add-to-Compare feature to enhance user experience.</li>' +
+                            '<li>Participated in the IT Development Program (ITDP) planning meetings that focused on business goals, AI technology, networking with industry professionals, and collaborated with various development departments across the company.</li>' +
+                        '</ul>' +
+
+                        '<h3 style="margin: 0;">Software Engineer Intern | Dell Technologies</h3>' +
+                        '<p style="margin: 0;">June 2022 - August 2022</p>' +
+                        '<ul>' +
+                            '<li>Developed clean, maintainable code for API health checks and automated daily email reports to track API status to immediate team using C# and SMTP. This project helped reduce manual monitoring by eliminating the need for the team to individually check each API and their statuses.</li>' +
+                            '<li>Provided detailed project reports and milestone updates to the team and manager, ensuring the alighnment with business goals.</li>' +
+                            '<li>At the conclusion of the internship, I presented the results and key takeaways of my project to not only my immediate team, but to the different teams across ITDP.</li>' +
+                        '</ul>',
+                
+                'contact': '<h1>Contact</h1>' +
+                        '<p>Email me at Stephie.Castles@gmail.com</p>' +
+                        '<p>Let\'s connect on <a href="https://www.linkedin.com/in/stephaniejcastillo/" target="_blank">LinkedIn</a>!</p>' +
+                        '<p>Check out my projects on <a href="https://github.com/StailloG" target="_blank">GitHub</a>!</p>'
             };
 
             document.getElementById('display-area').innerHTML = content[section];
-
             document.querySelectorAll('.category .section').forEach(sec => sec.classList.remove('active'));
             document.getElementById(section).classList.add('active');
         }
