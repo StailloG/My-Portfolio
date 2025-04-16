@@ -39,7 +39,7 @@ body { /*Category*/
 .content {
     flex-grow: 1;
     width: 1000px;
-    height: 80%;
+    height: auto;
     padding: 10px;
     background-color: #FBF9F4; /*warm cream*/
     margin-right: 20px;
