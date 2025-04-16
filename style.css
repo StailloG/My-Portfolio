@@ -1,7 +1,3 @@
-.dimmed-text {
-    opacity: 0.5;
-}
-
 body { /*Category*/
     display: flex;
     height: 100vh;
@@ -14,25 +10,27 @@ body { /*Category*/
     display: flex;
     flex-grow: 1;
     height: calc(100vh - 150px); /* Subtract header height from 100vh */
+    flex-wrap: wrap;
 }
-/*Titles to click on*/
 .category {
     flex-grow: 1;
     width: 250px;
-    height: 835px;
-    background-color: #f5f1e6; /*soft beige*/
+    height: auto; /* Let height adjust */
+    max-height: none;
+    background-color: #f5f1e6;
     padding: 5px;
-    border: 2px solid  #E2D7C3; /*light taupe*/
+    border: 2px solid #E2D7C3;
     margin-left: 20px;
-    margin-top: 0px;
-}
-.category .section {
-    padding: 10px;
-    cursor: pointer;
+    margin-top: 0;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    border-radius: 5px;
+    flex-direction: column;
+    flex-wrap: wrap; /* Enable wrapping */
+}
+  .category .section h2 {
+    font-size: 20px;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .category .section:hover, .category .section.active {
     background: #d8c8a3; /*muted tan*/
@@ -41,7 +39,7 @@ body { /*Category*/
 .content {
     flex-grow: 1;
     width: 1000px;
-    height: 94.9%;
+    height: 80%;
     padding: 10px;
     background-color: #FBF9F4; /*warm cream*/
     margin-right: 20px;
@@ -54,43 +52,49 @@ body { /*Category*/
 }
 /*tab decor*/
 .window-tab {
-    position: relative;
-    width: 78.5%; /* Makes it span across the full page width */
-    height: 100; /* Adjust the height as needed for a square or rectangle */
+    /*position: relative;*/
+    width: 100%;
+    height: 50px;
     background-color: #7393B3;
     border: 2px solid black;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 /*search decor*/
 .search-decor {
-    position: relative;
-    width: 78.5%;
-    height: 200px;
+    /*position: relative;*/
+    width: 100%;
+    height: 70px;
     background-color: #D2B1A3;
     border: 2px solid black;
     display: flex;
     align-items: center;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 /*search bar decor*/
 .white-search-bar {
-    position: relative;
+    /*position: relative;*/
     width: 1200px;
     height: 35px;
     background-color: white;
     display: flex;
     border: 3px solid black;
     margin: 0 10px;
+    flex-wrap: wrap;
 }
-.search-bar {
+.folder-box {
     width: 1500px;
-    height: 1500px;
+    min-height: 100vh;
     margin: 0 auto;
     background-color: #D2B1A3;
     border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
